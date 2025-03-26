@@ -1,0 +1,59 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Expense Tracker</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.814.0.min.js"></script>
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Expense Tracker</h1>
+
+            <h2>Set Monthly Budget</h2>
+            <label for="budget">Budget: ₹</label>
+            <input type="number" id="budget" required>
+            <button onclick="setBudget()">Save Budget</button>
+
+            <h3 id="budgetStatus">Total Spent: ₹0 / Budget: ₹0</h3>
+
+            <form id="expenseForm">
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" required>
+
+                <label for="category">Category:</label>
+                <select id="category" required onchange="toggleCustomCategory()">
+                    <option value="Food & Drinks">Food & Drinks</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <input type="text" id="customCategory" placeholder="Enter category" style="display: none;">
+
+                <button type="submit">Add Expense</button>
+            </form>
+
+            <h2>Expense List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="expenseList">
+                    <!-- Expenses will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </body>
+    </html>
