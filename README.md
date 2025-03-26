@@ -12,7 +12,7 @@ The **Expense Tracker** is a web-based application designed to help users manage
 - **AWS QuickSight Integration** – Analyzes expense data using **Amazon QuickSight** and **AWS Athena** to convert **DynamoDB** data for visualization.
 - **User-Friendly Interface** – Simple and clean UI for easy navigation.
 
-## 🏗️ Tech Stack
+## 🏰️ Tech Stack
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** AWS SDK (JavaScript)
 - **Database:** AWS DynamoDB
@@ -21,24 +21,24 @@ The **Expense Tracker** is a web-based application designed to help users manage
 - **Development Environment:** Visual Studio Code
 
 ## 🚀 Installation and Setup
-### 1️⃣ Prerequisites
+### 1⃣ Prerequisites
 Before running the project, ensure you have:
 - **Node.js** installed ([Download here](https://nodejs.org))
 - **AWS Account** with configured IAM permissions
 - **Visual Studio Code** installed ([Download here](https://code.visualstudio.com/))
 
-### 2️⃣ Clone the Repository
+### 2⃣ Clone the Repository
 ```sh
- git clone https://github.com/your-username/expense-tracker.git
- cd expense-tracker
+git clone https://github.com/codesam2005/ExpenseTracker.git
+cd expense-tracker
 ```
 
-### 3️⃣ Install Dependencies
+### 3⃣ Install Dependencies
 ```sh
 npm install aws-sdk
 ```
 
-### 4️⃣ Configure AWS Credentials
+### 4⃣ Configure AWS Credentials
 Edit the `script.js` file and replace the following placeholders with your **own AWS credentials**:
 ```js
 AWS.config.update({
@@ -49,7 +49,7 @@ AWS.config.update({
 ```
 🚨 **Security Tip:** Never hardcode your AWS credentials. Use **IAM roles**, **AWS Cognito**, or environment variables for security.
 
-### 5️⃣ Create Required AWS Services
+### 5⃣ Create Required AWS Services
 You need to manually create the following AWS services before running the project:
 - **DynamoDB Tables:**
   - `BudgetTable` with **UserID** (Partition Key) and **budget** (Number)
@@ -60,14 +60,12 @@ You need to manually create the following AWS services before running the projec
   - Set up **Amazon QuickSight** to visualize spending trends and budget insights.
 - **IAM Permissions:** Ensure your IAM role has access to **DynamoDB**, **SNS**, **Athena**, and **QuickSight**.
 
-### 6️⃣ Run the Project
+### 6⃣ Run the Project
 Open **Visual Studio Code**, navigate to your project folder, and start a live server:
-```sh
-npx live-server
-```
-Then, open `http://localhost:8080` in your browser.
+1. Click on **Go Live** at the bottom-right corner of VS Code.
+2. Then, open `http://localhost:5500` in your browser.
 
-## 📬 Future Enhancements
+## 📩 Future Enhancements
 🔹 User authentication with **AWS Cognito**  
 🔹 More advanced analytics and reporting in **QuickSight**  
 🔹 Voice assistant for adding expenses  
